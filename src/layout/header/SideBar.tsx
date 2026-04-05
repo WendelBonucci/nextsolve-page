@@ -75,13 +75,13 @@ export default function Sidebar() {
         createPortal(
           <>
             <div
-              className={`fixed inset-0 z-[9998] min-h-screen h-full transition-all duration-300 bg-black/60 backdrop-blur-sm ${
+              className={`fixed inset-0 z-9998 min-h-screen h-full transition-all duration-300 bg-black/60 backdrop-blur-sm ${
                 isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
               }`}
             />
             <aside
               ref={sidebarRef}
-              className={`fixed top-0 right-0 z-[9999] h-screen w-72
+              className={`fixed top-0 right-0 z-9999 h-screen w-72
                 bg-white/5 backdrop-blur-xl
                 border-l border-white/10
                 shadow-[-20px_0_60px_rgba(0,0,0,0.5)]
@@ -125,9 +125,9 @@ export default function Sidebar() {
               </nav>
 
               <div className="absolute bottom-0 w-full">
-                <div className="h-px w-full bg-gradient-to-r from-transparent via-blue-500/40 to-transparent" />
+                <div className="h-px w-full bg-linear-to-r from-transparent via-blue-500/40 to-transparent" />
                 <div className="px-5 py-4">
-                  <span className="text-xs font-semibold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
+                  <span className="text-xs font-semibold tracking-wide text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-cyan-300">
                     NextSolve
                   </span>
                 </div>
