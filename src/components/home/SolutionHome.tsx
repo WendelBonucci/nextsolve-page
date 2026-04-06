@@ -1,121 +1,129 @@
 "use client";
-import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Aos from "aos";
-import "aos/dist/aos.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
 
-export default function SolutionHome() {
-  useEffect(() => {
-    Aos.init({
-      duration: 700,
-      easing: "ease-in-out",
-      once: true,
-    });
-  }, []);
+const solutions = [
+  {
+    id: 1,
+    image: "/medalbrazil.png",
+    alt: "Medalhas Brasil",
+    href: "https://www.medalhasbrasil.com/",
+  },
+  {
+    id: 2,
+    image: "/visiologo.png",
+    alt: "Ótica VisioCorp",
+    href: "https://www.visiocorp.com/",
+  },
+  {
+    id: 3,
+    image: "/bmcodelogo.png",
+    alt: "BMcode",
+    href: "https://www.bmcode.com.br/",
+  },
+  {
+    id: 4,
+    image: "/taskmanagerlogo.png",
+    alt: "Task Manager",
+    href: "https://www.taskmenager.com.br/",
+  },
+  {
+    id: 5,
+    image: "/financialcontrollogo.png",
+    alt: "Financial Control",
+    href: "https://www.financialcontrol.com.br/",
+  },
+  {
+    id: 6,
+    image: "/korivologo.png",
+    alt: "Korivo Sistema",
+    href: "https://www.korivo.com.br/",
+  },
+];
 
-  const dtcards = [
-    {
-      id: 1,
-      title: "E-commerce",
-      description:
-        "Crie sua loja virtual e comece agora mesmo a vender seus produtos online, com segurança e praticidade.",
-    },
-    {
-      id: 2,
-      title: "Landing Page",
-      description:
-        "Crie agora sua landing page e apresente sua empresa ao mundo, conquistando mais visibilidade e credibilidade online.",
-    },
-    {
-      id: 3,
-      title: "Automação com IA",
-      description:
-        "Cansado(a) de responder clientes o tempo todo ou de lidar com tarefas repetitivas? Nós automatizamos esses processos para você.",
-    },
-    {
-      id: 4,
-      title: "Aplicativos Android/iOS",
-      description:
-        "Desenvolvemos aplicativos com design moderno, dinâmico e funcional, feitos sob medida para impulsionar sua empresa.",
-    },
-    {
-      id: 5,
-      title: "Sistemas",
-      description:
-        "Sistemas completos para gerenciar, automatizar e escalar as operações do seu negócio com total eficiência.",
-    },
-  ];
+export default function ClientsHome() {
   return (
-    <section className="w-full min-h-screen flex bg-black px-12 py-20">
-      <div
-        className="max-w-6xl mx-auto flex  gap-5 flex-wrap-reverse items-center justify-center
-      "
-      >
-        <div
-          className="flex-1 flex justify-center"
-          data-aos="fade-right"
-          data-aos-duration="800"
-        >
-          <div className="w-full max-w-xl">
-            <p className="text-blue text-[11px] font-semibold tracking-[0.2em] uppercase mb-4 font-syne text-center md:text-left">
-              Nossas soluções
-            </p>
-
-            <h2 className="text-white font-syne font-extrabold text-5xl leading-tight mb-4 text-center md:text-left">
-              O que podemos
-              <br />
-              fazer por <span className="text-blue">você</span>
-            </h2>
-
-            <p className="text-gray text-sm leading-relaxed mb-10 max-w-md text-center md:text-left">
-              Tecnologia sob medida para impulsionar seu negócio. Escolha a
-              solução ideal e dê o próximo passo.
-            </p>
-
-            <ul className="flex flex-col gap-2 items-center md:items-start">
-              {dtcards.map((item) => (
-                <div key={item.id} className="w-full max-w-md">
-                  <li className="w-200 group rounded-xl border border-transparent px-5 py-4.5 hover:bg-blue/5 hover:border-blue/20 transition-all duration-200 cursor-pointer">
-                    <Link href="" className="flex items-center gap-3">
-                      <span className="font-syne text-[15px] font-bold text-white group-hover:text-blue transition-colors">
-                        {item.title}
-                      </span>
-                    </Link>
-
-                    <p className="text-gray text-[13.5px] leading-relaxed ml-7.5 mt-2">
-                      {item.description}
-                    </p>
-                  </li>
-                </div>
-              ))}
-            </ul>
-          </div>
+    <section className="w-full min-h-screen flex bg-balck px-16 py-20 max-md:px-6 max-md:py-14">
+      <div className="max-w-6xl mx-auto flex items-center gap-18 max-md:flex-col max-md:gap-12">
+        <div className="flex-1 min-w-0">
+          <span className="block font-syne text-[11px] font-bold tracking-[0.2em] uppercase text-blue opacity-80 mb-4">
+            Clientes & Projetos
+          </span>
+          <h1 className="font-syne font-extrabold text-[36px] leading-[1.1] text-white m-0 mb-5">
+            Conheça alguns de nossos clientes e sistemas.
+          </h1>
+          <p className="text-sm text-gray leading-[1.8] font-light m-0 max-w-sm">
+            Ao lado, você encontra empresas e sistemas para os quais entregamos
+            soluções tecnológicas com excelência.
+          </p>
         </div>
 
-        <div className="shrink-0 w-340px" data-aos="fade-left"
-          data-aos-duration="800">
-          <div className="inline-flex items-center gap-2 bg-blue/8 border border-blue/20 rounded-full px-3 py-1 mb-7">
-            <span className="w-1.25 h-1.25 rounded-full bg-blue animate-pulse" />
-            <span className="text-blue font-syne text-[11px] font-semibold tracking-wide">
-              disponível agora
-            </span>
-          </div>
+        {/* Right: carrossel */}
+        <div className="w-86 max-md:w-full shrink-0">
+          <div className="bg-[#141414] border border-blue/10 rounded-xl overflow-hidden">
+            <Swiper
+              modules={[Autoplay, Navigation, Pagination]}
+              autoplay={{ delay: 3000, disableOnInteraction: false }}
+              navigation={{
+                nextEl: ".swiper-next",
+                prevEl: ".swiper-prev",
+              }}
+              pagination={{
+                el: ".swiper-dots",
+                clickable: true,
+                bulletClass: "swiper-dot",
+                bulletActiveClass: "swiper-dot-active",
+              }}
+              loop
+            >
+              {solutions.map((item) => (
+                <SwiperSlide key={item.id}>
+                  <div className="flex flex-col items-center justify-center gap-5 py-8 px-8 h-105">
+                    <div className="w-55 h-52.5 relative flex items-center justify-center bg-white/3 border border-white/[0.07] rounded-lg overflow-hidden">
+                      <Image
+                        src={item.image}
+                        alt={item.alt}
+                        fill
+                        className="w-full h-full object-contain p-3"
+                        sizes="320px"
+                      />
+                    </div>
+                    <span className="font-syne text-sm font-bold text-white">
+                      {item.alt}
+                    </span>
+                    <Link
+                      href={item.href}
+                      target="_blank"
+                      className="font-syne text-[11px] font-bold tracking-[0.08em] uppercase text-blue border-b border-blue/30 pb-px"
+                    >
+                      Acesse →
+                    </Link>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
 
-          <div className="relative rounded-xl overflow-hidden border border-blue/12 bg-[#141414]">
-            <span className="absolute top-2 left-2 w-2.5 h-2.5 border-t-[1.5px] border-l-[1.5px] border-blue/40" />
-            <span className="absolute top-2 right-2 w-2.5 h-2.5 border-t-[1.5px] border-r-[1.5px] border-blue/40" />
-            <span className="absolute bottom-2 left-2 w-2.5 h-2.5 border-b-[1.5px] border-l-[1.5px] border-blue/40" />
-            <span className="absolute bottom-2 right-2 w-2.5 h-2.5 border-b-[1.5px] border-r-[1.5px] border-blue/40" />
-
-            <Image
-              width={490}
-              height={600}
-              alt="solution"
-              src="/solutionserv.png"
-              className="w-full h-auto"
-            />
-            <div className="absolute bottom-0 left-0 right-0 h-28 bg-linear-to-t from-blue/7 to-transparent pointer-events-none" />
+            {/* Controls */}
+            <div className="flex items-center justify-between px-5 py-3.5 border-t border-white/5">
+              <div className="swiper-dots flex gap-1.5 items-center [&_.swiper-dot]:w-1.25 [&_.swiper-dot]:h-1.25 [&_.swiper-dot]:rounded-full [&_.swiper-dot]:bg-white/15 [&_.swiper-dot]:cursor-pointer [&_.swiper-dot-active]:w-4 [&_.swiper-dot-active]:rounded-[3px] [&_.swiper-dot-active]:bg-blue" />
+              <div className="flex gap-2">
+                <button
+                  type="button"
+                  className="swiper-prev w-10 h-10 rounded-md border border-blue/20 text-blue text-sm flex items-center justify-center hover:bg-blue/10 transition-colors"
+                >
+                  ‹
+                </button>
+                <button
+                  type="button"
+                  className="swiper-next w-10 h-10 rounded-md border border-blue/20 text-blue text-sm flex items-center justify-center hover:bg-blue/10 transition-colors"
+                >
+                  ›
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

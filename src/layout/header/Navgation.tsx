@@ -6,7 +6,7 @@ export default function Navigation() {
     { id: 1, text: "Quem somos", href: "/" },
     {
       id: 2,
-      text: "Soluções",
+      text: "Serviços",
       href: "/",
       drop: [
         { id: 1, text: "E-commerce", href: "/" },
@@ -17,7 +17,7 @@ export default function Navigation() {
       ],
       icon: SlArrowDown,
     },
-    { id: 3, text: "Entregas", href: "/" },
+    { id: 3, text: "Soluções", href: "/" },
     { id: 4, text: "Comunidade", href: "/" },
   ];
 
