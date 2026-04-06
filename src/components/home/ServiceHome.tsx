@@ -48,10 +48,7 @@ export default function Service() {
   ];
   return (
     <section className="w-full min-h-screen flex bg-black px-12 py-20">
-      <div
-        className="max-w-6xl mx-auto flex  gap-5 flex-wrap-reverse items-center justify-center
-      "
-      >
+      <div className="max-w-6xl mx-auto flex  gap-5 flex-wrap-reverse items-center justify-center">
         <div
           className="flex-1 flex justify-center"
           data-aos="fade-right"
@@ -93,8 +90,11 @@ export default function Service() {
           </div>
         </div>
 
-        <div className="shrink-0 w-340px" data-aos="fade-left"
-          data-aos-duration="800">
+        <div
+          className="shrink-0 w-340px"
+          data-aos="fade-left"
+          data-aos-duration="800"
+        >
           <div className="inline-flex items-center gap-2 bg-blue/8 border border-blue/20 rounded-full px-3 py-1 mb-7">
             <span className="w-1.25 h-1.25 rounded-full bg-blue animate-pulse" />
             <span className="text-blue font-syne text-[11px] font-semibold tracking-wide">
@@ -109,8 +109,8 @@ export default function Service() {
             <span className="absolute bottom-2 right-2 w-2.5 h-2.5 border-b-[1.5px] border-r-[1.5px] border-blue/40" />
 
             <Image
-              width={490}
-              height={600}
+              width={450}
+              height={580}
               alt="solution"
               src="/solutionserv.png"
               className="w-full h-auto"

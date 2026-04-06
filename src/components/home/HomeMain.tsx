@@ -2,6 +2,7 @@ import InitialContent from "./InitialContent";
 import AboutHome from "./AboutHome";
 import Service from "./ServiceHome";
 import SolutionHome from "./SolutionHome";
+import CommunityHome from "./CommunityHome";
 
 export default function HomeMain() {
   return (
@@ -10,6 +11,7 @@ export default function HomeMain() {
       <AboutHome />
       <Service />
       <SolutionHome />
+      <CommunityHome />
     </main>
   );
 }

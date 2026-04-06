@@ -58,7 +58,6 @@ export default function ClientsHome() {
 
   return (
     <section className="relative w-full min-h-screen flex bg-balck px-16 py-20 max-md:px-6 max-md:py-14">
-   
       <div
         className="max-w-4xl mx-auto flex items-center gap-18 max-md:flex-col max-md:gap-12"
         data-aos="fade-right"
@@ -148,12 +147,11 @@ export default function ClientsHome() {
         </div>
       </div>
 
-         <div className="absolute left-8 top-1/2 -translate-y-1/2 hidden lg:flex flex-col items-center gap-3">
+      <div className="absolute left-8 top-1/2 -translate-y-1/2 hidden lg:flex flex-col items-center gap-3">
         <div className="w-px h-24 bg-blue/40" />
         <div className="w-1.5 h-1.5 rounded-full bg-blue" />
         <div className="w-px h-24 bg-blue/40" />
       </div>
-
     </section>
   );
 }
