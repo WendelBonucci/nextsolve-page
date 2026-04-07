@@ -1,5 +1,4 @@
 "use client";
-
 import Link from "next/link";
 import { FaInstagram, FaFacebookF } from "react-icons/fa";
 import { FaYoutube, FaLinkedinIn } from "react-icons/fa6";
@@ -60,14 +59,14 @@ export default function Footer() {
             {socialNetwork.map((item) => {
               const Icon = item.icon;
               return (
-                <a
+                <Link
                   key={item.id}
                   href={item.href}
                   className="flex items-center gap-2 text-sm text-gray hover:text-blue-400 transition-colors"
                 >
                   <Icon size={13} />
                   {item.label}
-                </a>
+                </Link>
               );
             })}
           </FooterColumn>
@@ -81,7 +80,6 @@ export default function Footer() {
           </FooterColumn>
         </div>
 
-        {/* Bottom */}
         <div className="mt-10 pt-6 flex flex-col md:flex-row items-center justify-between gap-2 border-t border-white/5">
           <p className="text-[11.5px] text-white/25">
             © 2026 NextSolve Studio Vision. Todos os direitos reservados
