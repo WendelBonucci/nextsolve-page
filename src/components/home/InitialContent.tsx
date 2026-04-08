@@ -32,17 +32,32 @@ export default function InitialContent() {
   };
 
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center px-6 md:px-10 overflow-hidden bg-black ">
+    <section className="relative w-full min-h-screen flex items-center justify-center px-6 md:px-10 overflow-hidden bg-black">
+      {/* Fundo com textura sutil e efeitos escuros */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(0,100,255,0.06),transparent_60%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(255,255,255,0.02),transparent_70%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_40%,rgba(0,100,255,0.02)_50%,transparent_60%)]" />
+      
+      {/* Textura de grid muito sutil */}
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(0deg,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:60px_60px]" />
+      
+      {/* Orbes escuras com toque minimal de azul */}
+      <div className="absolute top-1/3 -left-32 w-80 h-80 bg-blue rounded-full blur-[150px] opacity-[0.03]" />
+      <div className="absolute bottom-1/3 -right-32 w-96 h-96 bg-white rounded-full blur-[150px] opacity-[0.02]" />
+      
+      {/* Linha decorativa superior sutil */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue/20 to-transparent" />
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 max-w-7xl w-full items-center relative z-10 max-[748px]:py-30">
         <div
           data-aos="fade-right"
           data-aos-duration="800"
           className="relative group"
         >
-          <div className="absolute -inset-4 bg-linear-to-r from-blue/20 to-transparent rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+          <div className="absolute -inset-4 bg-blue/5 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
-          <div className="relative rounded-2xl lg:rounded-3xl overflow-hidden backdrop-blur-sm bg-white/5">
-            <div className="absolute inset-0 rounded-2xl lg:rounded-3xl p-1px bg-linear-to-r from-blue via-transparent to-blue opacity-50 group-hover:opacity-100 transition-opacity duration-700">
+          <div className="relative rounded-2xl lg:rounded-3xl overflow-hidden bg-white/5 shadow-2xl shadow-black/50">
+            <div className="absolute inset-0 rounded-2xl lg:rounded-3xl p-[1px] bg-linear-to-r from-white/10 via-blue/20 to-white/5 opacity-50 group-hover:opacity-100 transition-opacity duration-700">
               <div className="absolute inset-0 rounded-2xl lg:rounded-3xl bg-black" />
             </div>
 
@@ -63,13 +78,16 @@ export default function InitialContent() {
                       src={img.src}
                       alt={img.alt}
                       fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="object-cover transition-transform duration-700 group-hover:scale-105 brightness-90 contrast-110"
                       sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
                 </SwiperSlide>
               ))}
             </Swiper>
+            
+            {/* Overlay escuro no carrossel */}
+            <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-black/10 pointer-events-none" />
           </div>
         </div>
 
@@ -78,8 +96,8 @@ export default function InitialContent() {
           data-aos-duration="800"
           className="flex flex-col gap-6 lg:gap-8"
         >
-          <div className="inline-flex w-fit">
-            <span className="text-xs font-semibold tracking-wider uppercase px-4 py-1.5 rounded-full bg-blue/10 text-blue border border-blue/20 backdrop-blur-sm">
+          <div className="inline-flex w-fit group/badge">
+            <span className="text-xs font-semibold tracking-wider uppercase px-4 py-1.5 rounded-full bg-blue/5 text-blue border border-blue/15 backdrop-blur-sm group-hover/badge:bg-blue/10 group-hover/badge:border-blue/25 transition-all duration-300">
               Inovação & Tecnologia
             </span>
           </div>
@@ -88,40 +106,49 @@ export default function InitialContent() {
             {content.title}
           </h1>
 
-          <p className="text-base lg:text-lg leading-relaxed text-gray max-w-lg">
+          <p className="text-base lg:text-lg leading-relaxed text-gray-400 max-w-lg">
             {content.description}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <button
               type="button"
-              className="group relative w-fit px-8 py-3.5 rounded-full bg-blue text-black font-semibold text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue/25 overflow-hidden"
+              className="group relative w-fit px-8 py-3.5 rounded-full bg-blue text-black font-semibold text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue/20 overflow-hidden"
             >
               <span className="relative z-10 flex items-center gap-2">
                 {content.link}
               </span>
-              <div className="absolute inset-0 bg-linear-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </button>
 
             <button
               type="button"
-              className="group w-fit px-8 py-3.5 rounded-full bg-white/5 text-white border border-white/10 font-medium text-sm transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:scale-105"
+              className="group w-fit px-8 py-3.5 rounded-full bg-white/5 text-white border border-white/10 font-medium text-sm transition-all duration-300 hover:bg-white/10 hover:border-white/15 hover:scale-105"
             >
-              Ver Cases
+              <span className="relative z-10 flex items-center gap-2">
+                Ver Cases
+              </span>
             </button>
           </div>
 
-          <div className="flex gap-8 pt-8 border-t border-white/10">
-            <div></div>
-            <div>
-              <div className="text-2xl font-bold text-blue">100+</div>
-              <div className="text-xs text-gray">Projetos entregues</div>
+          <div className="flex gap-8 pt-8 border-t border-white/5">
+            <div className="group/stat">
+              <div className="text-2xl font-bold text-white/90 group-hover/stat:text-blue transition-colors duration-300">100+</div>
+              <div className="text-xs text-gray-500">Projetos entregues</div>
             </div>
-            <div>
-              <div className="text-2xl font-bold text-blue">99%</div>
-              <div className="text-xs text-gray">Clientes satisfeitos</div>
+            <div className="group/stat">
+              <div className="text-2xl font-bold text-white/90 group-hover/stat:text-blue transition-colors duration-300">99%</div>
+              <div className="text-xs text-gray-500">Clientes satisfeitos</div>
             </div>
           </div>
+        </div>
+      </div>
+      
+      {/* Scroll indicator escuro */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 opacity-40 hover:opacity-100 transition-opacity duration-300 cursor-pointer">
+        <span className="text-[10px] text-gray-600 tracking-[0.2em]">SCROLL</span>
+        <div className="w-5 h-8 border border-white/10 rounded-full flex justify-center">
+          <div className="w-px h-2 bg-blue rounded-full mt-1.5 animate-bounce" />
         </div>
       </div>
     </section>
