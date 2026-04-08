@@ -69,7 +69,7 @@ export default function InitialContent() {
               <Swiper
                 modules={[Autoplay, EffectFade]}
                 effect="fade"
-                autoplay={{ delay: 4000, disableOnInteraction: false }}
+                autoplay={{ delay: 3000, disableOnInteraction: false }}
                 loop
                 className="w-full aspect-4/3 lg:aspect-square"
               >
