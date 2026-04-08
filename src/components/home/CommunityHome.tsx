@@ -14,7 +14,7 @@ export default function CommunityHome() {
     <section className="relative w-full min-h-screen flex items-center justify-center bg-black px-6 md:px-12">
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-1/3 h-1/2 bg-blue-500/5 blur-[120px] pointer-events-none" />
 
-      <div className="max-w-5xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+      <div className=" max-w-5xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
 
         <div
           className="lg:col-span-5 space-y-8 text-center lg:text-left"
