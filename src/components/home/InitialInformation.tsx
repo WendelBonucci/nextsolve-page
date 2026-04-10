@@ -1,0 +1,97 @@
+"use client";
+import { useEffect } from "react";
+import { FaArrowRightLong } from "react-icons/fa6";
+import Link from "next/link";
+import Aos from "aos";
+import "aos/dist/aos.css";
+
+export default function InitialInformation() {
+    useEffect(() => {
+        Aos.init({
+            duration: 1200,
+            easing: "ease-in-out",
+            once: true,
+        });
+    }, []);
+
+    return (
+        <section className="relative w-full min-h-screen bg-[#050505] flex items-center justify-center overflow-hidden px-6">
+
+            <div className="absolute top-0 left-1/4 w-0.5 h-full bg-linear-to-b from-transparent via-blue-500/20 to-transparent rotate-35 transform-gpu" />
+            <div className="absolute bottom-0 right-1/4 w-0.5 h-full bg-linear-to-b from-transparent via-blue-500/10 to-transparent -rotate-35 transform-gpu" />
+
+            <div className="absolute inset-0 z-0">
+                <div className="absolute inset-0 bg-[radial-gradient(1px_1px_at_20px_30px,#fff,transparent)] bg-size-[100px_100px] opacity-20" />
+                <div className="absolute inset-0 bg-[radial-gradient(1.5px_1.5px_at_50px_80px,#79C4F2,transparent)] bg-size-[150px_150px] opacity-10" />
+
+                <div className="absolute top-[20%] right-[-10%] w-125 h-125 bg-blue-600/10 rounded-full blur-[120px] animate-pulse" />
+                <div className="absolute bottom-[-10%] left-[-5%] w-125 h-125 bg-blue-900/15 rounded-full blur-[150px]" />
+
+                <div className="absolute bottom-0 w-full h-px bg-linear-to-r from-transparent via-blue-500/20 to-transparent" />
+            </div>
+
+            <div className="relative z-10 max-w-7xl w-full flex flex-col items-center text-center">
+
+                <div
+                    data-aos="fade-down"
+                    className="mb-10 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-blue-500/20 bg-blue-500/5 backdrop-blur-sm"
+                >
+                    <div className="w-1.5 h-1.5 rounded-full bg-blue-500 shadow-[0_0_8px_#3b82f6]" />
+                    <p className="text-[10px] md:text-xs font-bold tracking-[0.4em] uppercase text-blue-400">
+                        Next Generation Business
+                    </p>
+                </div>
+
+                <div
+                    data-aos="zoom-out"
+                    data-aos-delay="200"
+                    className="flex flex-col gap-2 md:gap-4 mb-10"
+                >
+                    <h1 className="font-syne font-black text-4xl md:text-8xl lg:text-9xl text-white tracking-tighter leading-none">
+                        Soluções <span className="text-white/90">tecnológicas</span>
+                    </h1>
+
+                    <h2 className="font-syne font-black text-6xl md:text-7xl lg:text-[11rem] leading-none tracking-tighter italic">
+                        <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 via-blue-600 to-white animate-gradient-x">
+                            estratégicas.
+                        </span>
+                    </h2>
+                </div>
+
+                <p
+                    data-aos="fade-up"
+                    data-aos-delay="400"
+                    className="max-w-2xl text-gray-400 text-base md:text-xl font-light leading-relaxed mb-14"
+                >
+                    Ajudamos empresas a evoluírem com tecnologia sob medida,
+                    automatizando processos e potencializando resultados de forma
+                    <span className="text-white"> inteligente e escalável.</span>
+                </p>
+
+                <div data-aos="fade-up" data-aos-delay="600">
+                    <Link
+                        href='/contato'
+                        className="group relative inline-flex items-center gap-6 px-12 py-5 bg-white text-black font-bold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)]"
+                    >
+                        <span className="text-sm md:text-base uppercase tracking-widest font-syne">
+                            Iniciar Consultoria
+                        </span>
+                        <FaArrowRightLong className="group-hover:translate-x-3 transition-transform duration-300 text-blue-600" />
+                    </Link>
+                </div>
+            </div>
+
+            <style jsx>{`
+        @keyframes gradient-x {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+        .animate-gradient-x {
+          background-size: 200% 200%;
+          animation: gradient-x 8s ease infinite;
+        }
+      `}</style>
+        </section>
+    );
+}

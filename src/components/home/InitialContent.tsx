@@ -48,6 +48,10 @@ export default function InitialContent() {
         <div className="absolute top-1/2 left-1/2 w-1 h-1 bg-blue-500 rounded-full shadow-[0_0_10px_rgba(121,196,242,0.6)] opacity-30" />
       </div>
 
+
+ <div className="absolute bottom-0 w-full h-px bg-linear-to-r from-transparent via-blue-500/20 to-transparent" />
+      
+
       <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-blue-500/30 to-transparent" />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 max-w-7xl w-full items-center relative z-10 py-20">
