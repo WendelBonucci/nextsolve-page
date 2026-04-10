@@ -47,11 +47,12 @@ export default function Sidebar() {
   }, [isOpen, closeMenu]);
 
   const links = [
-    { id: 1, label: "Home", href: "/" },
-    { id: 2, label: "Sobre", href: "/about" },
-    { id: 3, label: "Empresas", href: "/companies" },
-    { id: 4, label: "Suporte", href: "/policiesAndPrivacy" },
+    { id: 1, label: "Quem Somos", href: "/" },
+    { id: 2, label: "Serviços", href: "/about" },
+    { id: 3, label: "Soluções", href: "/companies" },
+    { id: 4, label: "Blog", href: "/policiesAndPrivacy" },
     { id: 5, label: "Contato", href: "/contact" },
+    { id: 6, label: "English", href: "/contact" },
   ];
 
   const [mounted, setMounted] = useState(false);
