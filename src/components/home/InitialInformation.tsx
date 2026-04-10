@@ -15,7 +15,7 @@ export default function InitialInformation() {
     }, []);
 
     return (
-        <section className="relative w-full min-h-screen bg-[#050505] flex items-center justify-center overflow-hidden px-6">
+        <section className="relative w-full min-h-screen bg-[#050505] flex items-center justify-center overflow-hidden px-6 py-30">
 
             <div className="absolute top-0 left-1/4 w-0.5 h-full bg-linear-to-b from-transparent via-blue-500/20 to-transparent rotate-35 transform-gpu" />
             <div className="absolute bottom-0 right-1/4 w-0.5 h-full bg-linear-to-b from-transparent via-blue-500/10 to-transparent -rotate-35 transform-gpu" />
@@ -33,17 +33,23 @@ export default function InitialInformation() {
                     <p className="text-[10px] md:text-xs font-bold tracking-[0.4em] uppercase text-blue-400">Next Generation Business</p>
                 </div>
 
-                <div data-aos="zoom-out" data-aos-delay="200" className="flex flex-col gap-2 md:gap-4 mb-10">
-                    <h1 className="font-syne font-black text-4xl md:text-8xl lg:text-9xl text-white tracking-tighter leading-none">
+                <div
+                    data-aos="zoom-out"
+                    data-aos-delay="200"
+                    className="flex flex-col gap-2 md:gap-4 mb-10"
+                >
+                    <h1 className="font-syne font-black text-4xl md:text-4xl lg:text-6xl text-white tracking-tight leading-tight">
                         Soluções <span className="text-white/90">tecnológicas</span>
                     </h1>
 
-                    <h2 className="font-syne font-black text-6xl md:text-7xl lg:text-[11rem] leading-none tracking-tighter italic">
-                        <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 via-blue-600 to-white animate-gradient-x">estratégicas.</span>
+                    <h2 className="font-syne font-black text-4xl md:text-5xl lg:text-7xl leading-tight tracking-tight italic">
+                        <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 via-blue-600 to-white animate-gradient-x">
+                            estratégicas.
+                        </span>
                     </h2>
                 </div>
 
-                <p data-aos="fade-up" data-aos-delay="400" className="max-w-2xl text-gray-400 text-base md:text-xl font-light leading-relaxed mb-14">
+                <p data-aos="fade-up" data-aos-delay="400" className="w-150 max-w-1xl text-gray-400 text-base md:text-xl font-light leading-relaxed mb-14">
                     Ajudamos empresas a evoluírem com tecnologia sob medida,
                     automatizando processos e potencializando resultados de forma
                     <span className="text-white"> inteligente e escalável.</span>

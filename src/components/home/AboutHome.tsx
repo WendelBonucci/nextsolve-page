@@ -97,7 +97,7 @@ export default function AboutHome() {
 
                 <Image
                   width={500}
-                  height={600}
+                  height={700}
                   alt="NextSolve Solutions"
                   src="/solutionserv.png"
                   className="w-full h-auto object-cover grayscale-20 group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
