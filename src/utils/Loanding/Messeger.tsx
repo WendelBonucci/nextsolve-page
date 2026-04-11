@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { BiSolidMessageRounded } from "react-icons/bi"
 import { IoClose } from "react-icons/io5"

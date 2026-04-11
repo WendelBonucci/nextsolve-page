@@ -56,11 +56,29 @@ export default function InitialInformation() {
                 </p>
 
                 <div data-aos="fade-up" data-aos-delay="600">
-                    <Link href='/contato'
-                        className="group relative inline-flex items-center gap-6 px-12 py-5 bg-white text-black font-bold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)]">
-                        <span className="text-sm md:text-base uppercase tracking-widest font-syne">Entre em contato</span>
-                        <FaArrowRightLong className="group-hover:translate-x-3 transition-transform duration-300 text-blue-600" />
-                    </Link>
+
+                    <Link
+                        href='/contato'
+                        className="group relative inline-flex items-center gap-6 px-12 py-5 bg-transparent text-white font-bold rounded-full transition-all duration-500 overflow-hidden border border-white/10 hover:border-blue-500/50 hover:shadow-[0_0_40px_rgba(59,130,246,0.3)]"
+                    >
+                        <div className="absolute inset-0 bg-linear-to-r from-blue-600/20 via-transparent to-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                        <div className="absolute inset-0 bg-white/3 backdrop-blur-md" />
+
+                        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            <div className="absolute top-0 left-0 w-full h-full bg-linear-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out" />
+                        </div>
+
+                        <span className="relative z-10 text-sm md:text-base uppercase tracking-[0.2em] font-syne group-hover:text-blue-400 transition-colors">
+                            Entre em contato
+                        </span>
+
+                        <div className="relative z-10 flex items-center justify-center w-8 h-8 rounded-full bg-white/5 border border-white/10 group-hover:bg-blue-500 group-hover:text-black transition-all duration-500">
+                            <FaArrowRightLong className="group-hover:translate-x-1 transition-transform duration-300" />
+                        </div>
+                        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-linear-to-r from-transparent via-blue-500 to-transparent group-hover:w-1/2 transition-all duration-500" />
+                    </Link>F
+
+
                 </div>
             </div>
 

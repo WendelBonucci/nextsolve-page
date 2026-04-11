@@ -21,15 +21,13 @@ export default function ClientsHome() {
   const solutions = [
     { id: 1, image: "/medalbrazil.png", alt: "Medalhas Brasil", href: "https://www.medalhasbrasil.com/", category: "E-commerce" },
     { id: 2, image: "/visiologo.png", alt: "Ótica VisioCorp", href: "https://www.visiocorp.com/", category: "Soluções Ópticas" },
-    { id: 4, image: "/taskmanagerlogo.png", alt: "Task Manager", href: "https://www.taskmenager.com.br/", category: "Produtividade" },
+    /* { id: 4, image: "/taskmanagerlogo.png", alt: "Task Manager", href: "https://www.taskmenager.com.br/", category: "Produtividade" }, */
     { id: 5, image: "/financialcontrollogo.png", alt: "Financial Control", href: "https://meu-controle-financeiro-web.vercel.app/", category: "Finanças" },
     { id: 6, image: "/korivologo.jpeg", alt: "Korivo Sistema", href: "https://www.korivo.com.br/", category: "Gestão Empresarial" },
   ];
 
   return (
     <section className="relative w-full min-h-screen bg-[#050505] overflow-hidden px-4 md:px-6 py-20 md:py-28 lg:px-16">
-
-      {/* BACKGROUND */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-1/4 w-125 h-125 bg-blue-600/5 rounded-full blur-[120px]" />
         <div className="absolute bottom-0 right-1/4 w-100 h-100 bg-blue-900/10 rounded-full blur-[100px]" />
@@ -37,7 +35,6 @@ export default function ClientsHome() {
 
       <div className="relative z-10 max-w-7xl mx-auto">
 
-        {/* HEADER */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 md:gap-8 mb-14 md:mb-20" data-aos="fade-up">
           <div className="max-w-2xl">
             <div className="flex items-center gap-3 mb-3 md:mb-4">
@@ -60,7 +57,6 @@ export default function ClientsHome() {
           </p>
         </div>
 
-        {/* SLIDER */}
         <div data-aos="fade-up" data-aos-delay="200">
           <Swiper
             modules={[Autoplay, Navigation, Pagination]}
@@ -144,7 +140,6 @@ export default function ClientsHome() {
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );
