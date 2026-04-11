@@ -50,8 +50,6 @@ export default function InitialContent() {
 
 
  <div className="absolute bottom-0 w-full h-px bg-linear-to-r from-transparent via-blue-500/20 to-transparent" />
-      
-
       <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-blue-500/30 to-transparent" />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 max-w-7xl w-full items-center relative z-10 py-20">
@@ -59,7 +57,7 @@ export default function InitialContent() {
         <div
           data-aos="zoom-in-left"
           data-aos-delay="200"
-          className="relative order-1 lg:order-2"
+          className="relative order-1 lg:order-2 sm:hover"
         >
           <div className="relative rounded-4xl p-3 bg-white/3 border border-white/10 backdrop-blur-sm shadow-2xl">
 
@@ -94,15 +92,10 @@ export default function InitialContent() {
               </Swiper>
             </div>
           </div>
-
           <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
         </div>
 
-        <div
-          data-aos="fade-right"
-          className="flex flex-col gap-8 order-2 lg:order-1 text-center lg:text-left"
-        >
-
+        <div data-aos="fade-right" className="flex flex-col gap-8 order-2 lg:order-1 text-center lg:text-left sm:hover">
           <div className="inline-flex items-center gap-2 w-fit mx-auto lg:mx-0 px-4 py-1.5 rounded-full bg-blue-500/5 border border-blue-500/20 backdrop-blur-md">
             <FiZap className="text-blue-400 text-sm animate-bounce" />
             <span className="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-blue-400">

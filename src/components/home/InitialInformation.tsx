@@ -28,7 +28,7 @@ export default function InitialInformation() {
             </div>
 
             <div className="relative z-10 max-w-7xl w-full flex flex-col items-center text-center">
-                <div data-aos="fade-down" className="mb-10 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-blue-500/20 bg-blue-500/5 backdrop-blur-sm">
+                <div data-aos="fade-down" className="mb-10 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-blue-500/20 bg-blue-500/5 backdrop-blur-sm sm:hover">
                     <div className="w-1.5 h-1.5 rounded-full bg-blue-500 shadow-[0_0_8px_#3b82f6]" />
                     <p className="text-[10px] md:text-xs font-bold tracking-[0.4em] uppercase text-blue-400">Next Generation Business</p>
                 </div>
@@ -36,7 +36,7 @@ export default function InitialInformation() {
                 <div
                     data-aos="zoom-out"
                     data-aos-delay="200"
-                    className="flex flex-col gap-2 md:gap-4 mb-10"
+                    className="flex flex-col gap-2 md:gap-4 mb-10 sm:hover"
                 >
                     <h1 className="font-syne font-black text-4xl md:text-4xl lg:text-6xl text-white tracking-tight leading-tight">
                         Soluções <span className="text-white/90">tecnológicas</span>
@@ -55,7 +55,7 @@ export default function InitialInformation() {
                     <span className="text-white"> inteligente e escalável.</span>
                 </p>
 
-                <div data-aos="fade-up" data-aos-delay="600">
+                <div className="sm:hover" data-aos="fade-up" data-aos-delay="600">
 
                     <Link
                         href='/contact'

@@ -68,7 +68,7 @@ export default function Service() {
 
       <div className="max-w-7xl mx-auto relative z-10">
 
-        <div className="flex flex-col items-center text-center mb-20" data-aos="fade-up">
+        <div className="flex flex-col items-center text-center mb-20 sm:hover" data-aos="fade-up">
           <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-1.5 mb-6">
             <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
             <span className="text-blue-400 font-syne text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase">
@@ -118,13 +118,12 @@ export default function Service() {
           ))}
         </div>
 
-        <div className="mt-20 flex justify-center" data-aos="zoom-in">
+        <div className="mt-20 flex justify-center sm:hover" data-aos="zoom-in">
           <div className="p-px bg-linear-to-r from-transparent via-blue-500/50 to-transparent w-full max-w-4xl" />
           <p className="absolute mt-8 text-gray-600 text-xs tracking-widest uppercase">
             Transformando o futuro, um código por vez.
           </p>
         </div>
-
       </div>
     </section>
   );

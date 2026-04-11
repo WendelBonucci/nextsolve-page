@@ -35,7 +35,7 @@ export default function ClientsHome() {
 
       <div className="relative z-10 max-w-7xl mx-auto">
 
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 md:gap-8 mb-14 md:mb-20" data-aos="fade-up">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 md:gap-8 mb-14 md:mb-20 sm:hover" data-aos="fade-up">
           <div className="max-w-2xl">
             <div className="flex items-center gap-3 mb-3 md:mb-4">
               <span className="w-10 md:w-12 h-px bg-blue-500" />
@@ -57,7 +57,7 @@ export default function ClientsHome() {
           </p>
         </div>
 
-        <div data-aos="fade-up" data-aos-delay="200">
+        <div className="sm:hover" data-aos="fade-up" data-aos-delay="200">
           <Swiper
             modules={[Autoplay, Navigation, Pagination]}
             autoplay={{ delay: 5000, disableOnInteraction: false }}
