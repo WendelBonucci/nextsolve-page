@@ -28,9 +28,9 @@ export default function Footer() {
   ];
 
   const socialNetwork: SocialItem[] = [
-    { id: 1, label: "Instagram", href: "/", icon: FaInstagram },
+    { id: 1, label: "Instagram", href: "https://www.instagram.com/nextsolve.company/", icon: FaInstagram },
     { id: 2, label: "YouTube", href: "/", icon: FaYoutube },
-    { id: 3, label: "LinkedIn", href: "/", icon: FaLinkedinIn },
+    { id: 3, label: "LinkedIn", href: "https://www.linkedin.com/company/next-solve-studio-vision/posts/?feedView=all", icon: FaLinkedinIn },
     { id: 4, label: "Facebook", href: "/", icon: FaFacebookF },
   ];
 

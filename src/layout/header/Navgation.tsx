@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Navigation() {
   const navLinks = [
-    { id: 1, text: "Quem somos", href: "/" },
+    { id: 1, text: "Quem somos", href: "/About" },
     {
       id: 2,
       text: "Serviços",

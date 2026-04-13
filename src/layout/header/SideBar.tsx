@@ -47,7 +47,7 @@ export default function Sidebar() {
   }, [isOpen, closeMenu]);
 
   const links = [
-    { id: 1, label: "Quem Somos", href: "/" },
+    { id: 1, label: "Quem Somos", href: "/About" },
     { id: 2, label: "Serviços", href: "/about" },
     { id: 3, label: "Soluções", href: "/companies" },
     { id: 4, label: "Blog", href: "/policiesAndPrivacy" },
