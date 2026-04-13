@@ -49,7 +49,7 @@ export default function InitialContent() {
       </div>
 
 
- <div className="absolute bottom-0 w-full h-px bg-linear-to-r from-transparent via-blue-500/20 to-transparent" />
+      <div className="absolute bottom-0 w-full h-px bg-linear-to-r from-transparent via-blue-500/20 to-transparent" />
       <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-blue-500/30 to-transparent" />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 max-w-7xl w-full items-center relative z-10 py-20">
@@ -129,7 +129,7 @@ export default function InitialContent() {
             </button>
 
             <button type="button" className="px-8 py-4 bg-transparent text-white border border-white/10 font-medium rounded-xl hover:bg-white/5 transition-all">
-              Ver Cases
+              Blog
             </button>
           </div>
 
