@@ -9,6 +9,17 @@ export default function DescriptionAbout() {
         Aos.init({ duration: 1000, once: true });
     }, []);
 
+    const services = [
+        { id: 1, label: 'Landing Pages' },
+        { id: 2, label: 'SaaS & Apps' },
+        { id: 3, label: 'Automação IA' },
+        { id: 4, label: 'Sistemas ERP' },
+        { id: 5, label: 'Tráfego Pago' },
+        { id: 6, label: 'E-commerces' },
+        { id: 7, label: 'Marketing' },
+        { id: 8, label: 'Evolução Tech' },
+    ]
+
     return (
         <section className="relative w-full py-24 bg-[#050505] overflow-hidden px-6">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-full bg-linear-to-b from-blue-500/20 via-blue-500/5 to-transparent hidden md:block" />
@@ -51,23 +62,17 @@ export default function DescriptionAbout() {
                     </div>
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4" data-aos="fade-up" data-aos-delay="400">
-                    {[
-                        "Landing Pages", "SaaS & Apps",
-                        "Automação IA", "Sistemas ERP",
-                        "Tráfego Pago", "E-commerces",
-                        "Marketing", "Evolução Tech"
-                    ].map((item, index) => (
-                        <div key={index} className="flex items-center gap-3 p-4 rounded-xl bg-white/1 border border-white/5 hover:border-blue-500/20 transition-all group">
+                    {services.map((item) => (
+                        <div key={item.id} className="flex items-center gap-3 p-4 rounded-xl bg-white/1 border border-white/5 hover:border-blue-500/20 transition-all group">
                             <FiZap className="text-blue-500/40 group-hover:text-blue-500 transition-colors" />
                             <span className="text-[11px] font-bold uppercase tracking-widest text-gray-500 group-hover:text-white transition-colors">
-                                {item}
+                                {item.label}
                             </span>
                         </div>
                     ))}
                 </div>
-
                 <div className="mt-20 text-center" data-aos="zoom-in">
-                    <p className="text-gray-500 font-mono text-sm">// Pronta para transformar ideias em resultados reais_</p>
+                    <p className="text-gray-500 font-mono text-sm">Pronta para transformar ideias em resultados reais</p>
                 </div>
             </div>
         </section>

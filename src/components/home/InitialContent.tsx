@@ -1,6 +1,7 @@
 "use client";
 import { useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -128,9 +129,9 @@ export default function InitialContent() {
               </span>
             </button>
 
-            <button type="button" className="px-8 py-4 bg-transparent text-white border border-white/10 font-medium rounded-xl hover:bg-white/5 transition-all">
+            <Link href='/Blog' className="px-8 py-4 bg-transparent text-white border border-white/10 font-medium rounded-xl hover:bg-white/5 transition-all">
               Blog
-            </button>
+            </Link>
           </div>
 
           <div className="flex gap-10 pt-8 mt-4 border-t border-white/5 justify-center lg:justify-start">

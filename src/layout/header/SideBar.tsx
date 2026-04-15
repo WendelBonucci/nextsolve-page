@@ -46,13 +46,18 @@ export default function Sidebar() {
     };
   }, [isOpen, closeMenu]);
 
-  const links = [
-    { id: 1, label: "Quem Somos", href: "/About" },
-    { id: 2, label: "Serviços", href: "/about" },
+  // 🔹 Links principais
+  const mainLinks = [
+    { id: 1, label: "Quem Somos", href: "/about" },
+    { id: 2, label: "Serviços", href: "/services" },
     { id: 3, label: "Soluções", href: "/companies" },
-    { id: 4, label: "Blog", href: "/policiesAndPrivacy" },
+    { id: 4, label: "Blog", href: "/blog" },
+  ];
+
+  // 🔹 Botões do rodapé
+  const bottomLinks = [
     { id: 5, label: "Contato", href: "/contact" },
-    { id: 6, label: "English", href: "/contact" },
+    { id: 6, label: "English", href: "/en" },
   ];
 
   const [mounted, setMounted] = useState(false);
@@ -62,7 +67,7 @@ export default function Sidebar() {
   }, []);
 
   return (
-    <>
+    <>    
       <button
         type="button"
         onClick={toggleMenu}
@@ -76,10 +81,8 @@ export default function Sidebar() {
         createPortal(
           <>
             <div
-              className={`fixed inset-0 z-9998 min-h-screen h-full transition-all duration-300 bg-black/60 backdrop-blur-sm ${
-                isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-              }`}
-            />
+              className={`fixed inset-0 z-9998 min-h-screen h-full transition-all duration-300 bg-black/60 backdrop-blur-sm ${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+                }`}/>
             <aside
               ref={sidebarRef}
               className={`fixed top-0 right-0 z-9999 h-screen w-72
@@ -87,55 +90,57 @@ export default function Sidebar() {
                 border-l border-white/10
                 shadow-[-20px_0_60px_rgba(0,0,0,0.5)]
                 transform transition-transform duration-300 ease-in-out
+                flex flex-col justify-between
                 ${isOpen ? "translate-x-0" : "translate-x-full"}`}
             >
-              <div className="flex items-center justify-between px-5 py-4 border-b border-white/10">
-                <span className="text-xs font-semibold tracking-[0.15em] text-white/30 uppercase">
-                  navegação
-                </span>
+              <div>
+                <div className="flex items-center justify-between px-5 py-4 border-b border-white/10">
+                  <span className="text-xs font-semibold tracking-[0.15em] text-white/30 uppercase">navegação</span>
 
-                <button
-                  type="button"
-                  onClick={closeMenu}
-                  aria-label="Fechar menu"
-                  className="flex items-center justify-center w-7 h-7 rounded-lg text-white/40 border border-transparent transition-all duration-300 hover:text-white hover:bg-blue-500/10 hover:border-blue-500/30"
-                >
-                  <FaTimes size={13} />
-                </button>
-              </div>
+                  <button type="button" onClick={closeMenu} aria-label="Fechar menu"
+                    className="flex items-center justify-center w-7 h-7 rounded-lg text-white/40 border border-transparent transition-all duration-300 hover:text-white hover:bg-blue-500/10 hover:border-blue-500/30">
+                    <FaTimes size={13} />
+                  </button>
+                </div>
 
-              <nav className="flex flex-col px-3 py-3 gap-0.5">
-                {links.map((link) => {
-                  const active = pathname === link.href;
+                <nav className="flex flex-col px-3 py-3 gap-1">
+                  {mainLinks.map((link) => {
+                    const active = pathname === link.href;
 
-                  return (
-                    <Link
-                      key={link.id}
-                      href={link.href}
-                      onClick={closeMenu}
-                      className={`px-4 py-2.5 rounded-lg text-sm font-medium tracking-wide border transition-all duration-200 ${
-                        active
+                    return (
+                      <Link
+                        key={link.id}
+                        href={link.href}
+                        onClick={closeMenu}
+                        className={`px-4 py-2.5 rounded-lg text-sm font-medium tracking-wide border transition-all duration-200 ${active
                           ? "bg-blue-500/15 text-white border-blue-500/30"
                           : "text-white/70 border-transparent hover:text-white hover:bg-blue-500/10 hover:border-blue-500/20"
-                      }`}
-                    >
-                      {link.label}
-                    </Link>
-                  );
-                })}
-              </nav>
+                          }`}>{link.label}</Link>
+                    );
+                  })}
+                </nav>
+              </div>
 
-              <div className="absolute bottom-0 w-full">
-                <div className="h-px w-full bg-linear-to-r from-transparent via-blue-500/40 to-transparent" />
-                <div className="px-5 py-4">
-                  <span className="text-xs font-semibold tracking-wide text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-cyan-300">
-                    NextSolve
-                  </span>
+              <div className="px-3 pb-4">
+                <div className="space-y-2">
+                  <Link href="/contact" onClick={closeMenu}
+                    className="block text-center px-4 py-2.5 rounded-lg text-sm font-semibold tracking-wide 
+                    text-white bg-blue-500 hover:bg-blue-600 transition-all">Contato</Link>
+
+                  <Link href="/en" onClick={closeMenu}
+                    className="block text-center px-4 py-2.5 rounded-lg text-sm font-medium tracking-wide 
+                    text-white/80 border border-white/20 hover:bg-white/5 hover:text-white transition-all">English</Link>
+                </div>
+
+                <div className="mt-6">
+                  <div className="h-px w-full bg-linear-to-r from-transparent via-blue-500/40 to-transparent" />
+                  <div className="pt-3"><span className="text-xs font-semibold tracking-wide text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-cyan-300">NextSolve</span>
+                  </div>
                 </div>
               </div>
             </aside>
           </>,
-          document.body,
+          document.body
         )}
     </>
   );
