@@ -96,12 +96,8 @@ export default function ContentBlog() {
                             </div>
 
                             <div className="flex flex-col">
-                                <h2 className="font-syne font-black text-xl md:text-2xl text-white uppercase tracking-tight group-hover:text-blue-500 transition-colors">
-                                    {item.title}
-                                </h2>
-
+                                <h2 className="font-syne font-black text-xl md:text-2xl text-white uppercase tracking-tight group-hover:text-blue-500 transition-colors">{item.title}</h2>
                                 <span className="text-gray-500 font-mono text-xs mt-1 mb-4 italic">{item.data} — {item.tag}</span>
-
                                 <p className="text-gray-400 text-sm md:text-base leading-relaxed font-light">{item.description}</p>
                                 <div className="mt-4 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <span className="text-[10px] font-bold uppercase tracking-widest text-blue-500">Ver projeto completo</span>

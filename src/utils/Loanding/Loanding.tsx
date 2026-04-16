@@ -13,7 +13,7 @@ export default function Loading() {
             setTimeout(() => {
                 setIsVisible(false);
             }, 800);
-        }, 2500);
+        }, 2000);
 
         return () => clearTimeout(timer);
     }, []);

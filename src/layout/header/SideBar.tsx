@@ -46,18 +46,11 @@ export default function Sidebar() {
     };
   }, [isOpen, closeMenu]);
 
-  // 🔹 Links principais
   const mainLinks = [
-    { id: 1, label: "Quem Somos", href: "/about" },
+    { id: 1, label: "Quem Somos", href: "/About" },
     { id: 2, label: "Serviços", href: "/services" },
     { id: 3, label: "Soluções", href: "/companies" },
-    { id: 4, label: "Blog", href: "/blog" },
-  ];
-
-  // 🔹 Botões do rodapé
-  const bottomLinks = [
-    { id: 5, label: "Contato", href: "/contact" },
-    { id: 6, label: "English", href: "/en" },
+    { id: 4, label: "Blog", href: "/Blog" },
   ];
 
   const [mounted, setMounted] = useState(false);

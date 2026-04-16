@@ -1,4 +1,3 @@
-import React from 'react'
 import InitialAbout from './InitialAbout'
 import DescriptionAbout from './DescriptionAbout'
 import Messenger from '@/utils/Loanding/Messeger'
