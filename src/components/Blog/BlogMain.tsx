@@ -1,16 +1,9 @@
-
-import ContentBlog from "./ContentBlog"
-import Messenger from "@/utils/Loanding/Messeger"
-import Loading from "@/utils/Loanding/Loanding"
+import ContentBlog from "./sections/ContentBlog"
 
 export default function BlogMain() {
     return (
-        <>
-            <Loading />
-            <main className="">
-                <ContentBlog />
-                <Messenger />
-            </main>
-        </>
+        <main className="">
+            <ContentBlog />
+        </main>
     )
 }

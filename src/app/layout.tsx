@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import Header from "@/layout/header/Header";
+import Messenger from "@/layout/Messeger/Messeger";
 import Footer from "@/layout/Footer/Footer";
 
 
@@ -57,6 +58,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={``}>
       <Header />
+      <Messenger />
       <body className="min-h-full flex flex-col">{children}</body>
       <Footer />
     </html>

@@ -2,7 +2,7 @@
 import { useForm } from 'react-hook-form'
 import z from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { FiMail, FiSend } from 'react-icons/fi'
+import { FiMail } from 'react-icons/fi'
 import { useEffect } from 'react'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
@@ -34,9 +34,13 @@ export default function FormContact() {
     })
 
     async function onSubmit(data: FormData) {
-        const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!
-        const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!
-        const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+        const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
+        const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
+        const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+
+        if (!serviceId || !templateId || !publicKey) {
+            throw new Error("Variáveis de ambiente do EmailJS não definidas!!")
+        }
 
         const templateParams = {
             nome: data.nome,

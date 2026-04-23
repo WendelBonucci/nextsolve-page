@@ -2,10 +2,10 @@
 import { useEffect, useState } from "react";
 /* import { usePathname } from "next/navigation"; */
 
-import Title from "./Title";
-import Navgation from "./Navgation";
-import Buttons from "./Buttons";
-import SideBar from "./SideBar";
+import Title from "./sections/Title";
+import Navgation from "./sections/Navgation";
+import Buttons from "./sections/Buttons";
+import SideBar from "./sections/SideBar";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
