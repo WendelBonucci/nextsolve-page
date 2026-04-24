@@ -27,7 +27,7 @@ export default function ClientsHome() {
   ];
 
   return (
-    <section className="relative w-full min-h-screen bg-[#050505] overflow-hidden px-4 md:px-6 py-20 md:py-28 lg:px-16">
+    <section className="relative w-full min-h-screen bg-[#050505] overflow-hidden px-4 md:px-6 py-20 md:py-28 lg:px-16" >
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-1/4 w-125 h-125 bg-blue-600/5 rounded-full blur-[120px]" />
         <div className="absolute bottom-0 right-1/4 w-100 h-100 bg-blue-900/10 rounded-full blur-[100px]" />
@@ -39,7 +39,7 @@ export default function ClientsHome() {
           <div className="max-w-2xl">
             <div className="flex items-center gap-3 mb-3 md:mb-4">
               <span className="w-10 md:w-12 h-px bg-blue-500" />
-              <span className="font-syne text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase text-blue-400">
+              <span className="font-syne text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase text-blue-400" id="Solutions">
                 Cases de Sucesso
               </span>
             </div>

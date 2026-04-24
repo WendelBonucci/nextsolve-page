@@ -7,17 +7,17 @@ export default function Navigation() {
     {
       id: 2,
       text: "Serviços",
-      href: "/",
+      href: "/Service",
       drop: [
-        { id: 1, text: "E-commerce", href: "/" },
-        { id: 2, text: "Landing Page - Empresarial", href: "/" },
-        { id: 3, text: "Automação com IA", href: "/" },
-        { id: 4, text: "Aplicativos - Android/IOs", href: "/" },
-        { id: 5, text: "Sistemas Empresariais", href: "/" },
+        { id: 1, text: "E-commerce", href: "/Service" },
+        { id: 2, text: "Landing Page - Empresarial", href: "/Service" },
+        { id: 3, text: "Automação com IA", href: "/Service" },
+        { id: 4, text: "Aplicativos - Android/IOs", href: "/Service" },
+        { id: 5, text: "Sistemas Empresariais", href: "/Service" },
       ],
       icon: SlArrowDown,
     },
-    { id: 3, text: "Soluções", href: "/" },
+    { id: 3, text: "Soluções", href: "#Solutions" },
     { id: 4, text: "Blog", href: "/Blog" },
   ];
 
